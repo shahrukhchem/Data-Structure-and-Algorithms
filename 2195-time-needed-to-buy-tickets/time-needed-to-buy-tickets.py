@@ -5,7 +5,6 @@ class Solution:
         currque= deque(range(len(tickets)))
         time=0
         while notbyk!=0:
-            
                 x= currque.popleft()
                 tickets[x]=tickets[x]-1
                 time=time+1
