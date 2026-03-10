@@ -3,7 +3,6 @@ class Solution:
     def timeRequiredToBuy(self, tickets: List[int], k: int) -> int:
         notbyk=tickets[k]
         currque= deque(range(len(tickets)))
-       
         time=0
         while notbyk!=0:
             if currque:
