@@ -18,7 +18,7 @@ class Solution:
                 dfsrecur(node.right,res)
             res.pop()
         dfsrecur(root,res)
-        
+        print(paths)
         return paths
 
         
