@@ -11,9 +11,3 @@ class Solution:
                 dfsrecur(openbracket,closebracket+1,bracket+')')
         dfsrecur(0,0,"")
         return result
-
-        
-       
-            
-        backtrack(0,0)
-        return res
