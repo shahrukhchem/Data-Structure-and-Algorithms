@@ -2,16 +2,17 @@ class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
         sol,res=[],[]
         n=len(candidates)
-        def backtrack(i):
-            if sum(sol)==target:
-                res.append(sol[:])
-                return 
-            if sum(sol)>target or i==n:
-                return 
-            backtrack(i+1)
-            sol.append(candidates[i]) 
-            backtrack(i)
-            sol.pop()
-        backtrack(0)
+        def dfsrecur(start,numbers):
+            if sum(numbers)==target:
+                res.append(numbers.copy())
+                return
+            if sum(numbers)>target:
+                start=start+1
+                return
+            for num in range(start,len(candidates)):
+                numbers.append(candidates[num])
+                dfsrecur(num,numbers)
+                numbers.pop()
+        dfsrecur(0,[])
         return res
 
