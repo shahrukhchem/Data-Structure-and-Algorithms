@@ -7,7 +7,6 @@ class Solution:
                 res.append(numbers.copy())
                 return
             if sum(numbers)>target:
-                start=start+1
                 return
             for num in range(start,len(candidates)):
                 numbers.append(candidates[num])
