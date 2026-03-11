@@ -10,7 +10,7 @@ class Solution:
         res=[]
         def dfsrecur(node,res):
             res.append(str(node.val))
-            print(paths)
+            print(res)
             if not node.left and not node.right:
                 paths.append("->".join(res))
             if node.left:
