@@ -11,7 +11,7 @@ class Solution:
         tree.append(root)
         res=[]
         while tree:
-            print(tree[0].val)
+           
             if tree[0].right:
                 tree.append(tree[0].right)
             if tree[0].left:
