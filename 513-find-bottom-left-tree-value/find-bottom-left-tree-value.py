@@ -7,8 +7,7 @@
 from collections import deque
 class Solution:
     def findBottomLeftValue(self, root: Optional[TreeNode]) -> int:
-        tree=deque()
-        tree.append(root)
+        tree=deque([root])
         while tree:
             if tree[0].right:
                 tree.append(tree[0].right)
