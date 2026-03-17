@@ -11,14 +11,13 @@ class Solution:
         tree.append(root)
         res=[]
         while tree:
-           
             if tree[0].right:
                 tree.append(tree[0].right)
             if tree[0].left:
                 tree.append(tree[0].left)
             x=tree.popleft()
-            res.append(x.val)
-        return res[-1]
+            res=x.val
+        return res
 
 
         
