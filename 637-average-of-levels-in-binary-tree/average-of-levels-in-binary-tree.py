@@ -12,16 +12,17 @@ class Solution:
         while tree:
             node,level=tree.popleft()
             if level in res:
-                res[level].append(node.val)
+                res[level]=(res[level][0]+node.val,res[level][1]+1)
             else:
-                res[level]=[node.val]
+                res[level]=(node.val,1)
             if node.left:
                 tree.append((node.left,level+1))
             if node.right:
                 tree.append((node.right,level+1))
+        print(res)
         fres=[]
         for i in res:
-            fres.append(sum(res[i])/len(res[i]))
+            fres.append(res[i][0]/res[i][1])
         return fres
         
 
