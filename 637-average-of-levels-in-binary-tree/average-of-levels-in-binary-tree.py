@@ -19,6 +19,7 @@ class Solution:
                 tree.append((node.left,level+1))
             if node.right:
                 tree.append((node.right,level+1))
+        
         fres=[]
         for i in res:
             fres.append(res[i][0]/res[i][1])
