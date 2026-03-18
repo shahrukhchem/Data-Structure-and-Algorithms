@@ -24,5 +24,3 @@ class Solution:
             fres.append(res[i][0]/res[i][1])
         return fres
         
-
-        
