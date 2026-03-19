@@ -8,8 +8,7 @@ class Solution:
                  lst.append(ind) 
                  count=duplicates[i][0]+1
                  duplicates[i]=(count, lst)
-                 if count>=2:
-                    if lst[-1] - lst[-2] <= k:
+                 if lst[-1] - lst[-2] <= k:
                         return True
             else:
                 duplicates[i]=(1,[ind])
