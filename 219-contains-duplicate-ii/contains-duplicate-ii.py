@@ -4,9 +4,9 @@ class Solution:
         ind=0
         for i in nums:
             if i in duplicates:
-                 lst = duplicates[i][1]  
+                 count,lst = duplicates[i]
                  lst.append(ind) 
-                 count=duplicates[i][0]+1
+                 count=count+1
                  duplicates[i]=(count, lst)
                  if lst[-1] - lst[-2] <= k:
                         return True
