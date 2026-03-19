@@ -11,8 +11,6 @@ class Solution:
                  if count>=2:
                     if lst[-1] - lst[-2] <= k:
                         return True
-
-
             else:
                 duplicates[i]=(1,[ind])
             ind+=1
