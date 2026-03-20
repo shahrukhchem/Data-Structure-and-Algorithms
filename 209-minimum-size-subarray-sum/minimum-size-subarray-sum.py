@@ -8,7 +8,8 @@ class Solution:
         while r<n:
             indosize=r-l+1
             if currsum>=target:
-                minsize=min(minsize,indosize)
+                if minsize>indosize:
+                    minsize=indosize
                 currsum=currsum-nums[l]
                 l=l+1
             else:
