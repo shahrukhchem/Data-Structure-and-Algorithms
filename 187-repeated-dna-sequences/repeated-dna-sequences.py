@@ -13,7 +13,7 @@ class Solution:
             alldna.add(firstdna)
             res=[]
             for i in range(0,n-9):
-                print(l,r)
+                
                 currdna= firstdna=s[l:r+1]
                 if currdna in alldna:
                     res.append(currdna)
