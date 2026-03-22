@@ -12,7 +12,6 @@ class Solution:
         n=len(nums)
         countsubarr=0
         while l<=n-3 :
-            print(l,r)
             indosize=r-l+1
             currnums=nums[l:r+1]
             if indosize<3:
