@@ -18,6 +18,4 @@ class Solution:
             count[s[l]]=count[s[l]]-1 
             if count[s[l]]==0:
                 count.pop(s[l])
-              
-            
         return res
