@@ -14,8 +14,6 @@ class Solution:
             else:
                 countdic[s[l]]=countdic[s[l]]-1
                 l=l+1
-                
-                
         return count
 
 
