@@ -2,22 +2,6 @@ class Solution:
     def characterReplacement(self, s: str, k: int) -> int:
         l=0
         n=len(s)
-        def istrvalid(s,k):
-            setofs=set(s)
-            counter={}
-            for i in s:
-                if i in counter:
-                    counter[i]+=1
-                else:
-                    counter[i]=1
-            mostfreq=max(counter, key=counter.get)
-            othercount=0
-            for i in counter:
-                if i != mostfreq:
-                    othercount+= counter[i]
-            if othercount >k:  
-                return False          
-            return True
         currs=''
         countdic={}
         maxf = 0
