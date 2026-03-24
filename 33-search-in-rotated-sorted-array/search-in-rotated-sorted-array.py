@@ -12,7 +12,6 @@ class Solution:
         if not found:
             i = 0
         unrotatenums=nums[i:]+nums[:i]
-        print(unrotatenums)
         #binarysearch 
         L=0
         R=n-1
