@@ -17,7 +17,6 @@ class Solution:
         R=n-1
         while L<=R:
             M=L+((R-L)//2)
-            
             if unrotatenums[M]==target:
                 return (M + i) % n
             elif target<unrotatenums[M]:
