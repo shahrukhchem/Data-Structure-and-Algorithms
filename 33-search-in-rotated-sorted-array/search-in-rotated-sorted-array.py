@@ -9,7 +9,6 @@ class Solution:
                 if nums[i]<nums[i-1]:
                     found = True
                     break
-        
         if not found:
             i = 0
         unrotatenums=nums[i:]+nums[:i]
