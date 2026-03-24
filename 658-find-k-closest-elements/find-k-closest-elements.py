@@ -1,10 +1,11 @@
+from collections import deque
 class Solution:
     def findClosestElements(self, arr: List[int], k: int, x: int) -> List[int]:
         n=len(arr)
         l=0
         r=0
         indosize=r-l+1
-        currindo=[]
+        currindo=deque()
         totaldisfromx=0
         maxdist=float('inf')
         for l in range(0,n-k+1):
@@ -16,6 +17,6 @@ class Solution:
                 maxdist=totaldisfromx
                 res=currindo.copy()
             totaldisfromx=totaldisfromx-abs(currindo[0]-x)
-            currindo.pop(0)
-        return res
+            currindo.popleft()
+        return list(res)
             
