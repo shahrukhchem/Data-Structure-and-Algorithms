@@ -16,8 +16,7 @@ class Solution:
         
         nor=len(matrix) 
         for i in range(0,nor):
-            if matrix[i][0]<=target:
-                    if binarysearch(matrix[i],target):
+            if matrix[i][0]<=target and binarysearch(matrix[i],target):
                         return True
         return False
 
