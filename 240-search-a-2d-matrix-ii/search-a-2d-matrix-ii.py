@@ -13,7 +13,6 @@ class Solution:
                 else:
                     r=m-1
             return False
-        
         nor=len(matrix) 
         for i in range(0,nor):
             if matrix[i][0]<=target and binarysearch(matrix[i],target):
