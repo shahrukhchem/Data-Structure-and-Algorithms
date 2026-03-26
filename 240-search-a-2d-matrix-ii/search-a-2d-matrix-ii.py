@@ -1,7 +1,6 @@
 class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
-        def binarysearch(arr,target):
-            n=len(arr)
+        def binarysearch(arr,target,n):
             l=0
             r=n-1
             while l<=r:
@@ -13,9 +12,10 @@ class Solution:
                 else:
                     r=m-1
             return False
-        nor=len(matrix) 
+        nor=len(matrix)
+        noc=len(matrix[0])
         for i in range(0,nor):
-            if matrix[i][0]<=target and binarysearch(matrix[i],target):
+            if matrix[i][0]<=target and binarysearch(matrix[i],target,noc):
                         return True
         return False
 
