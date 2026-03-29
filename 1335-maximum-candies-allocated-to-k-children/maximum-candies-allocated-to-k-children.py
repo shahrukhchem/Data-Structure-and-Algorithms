@@ -1,6 +1,5 @@
 class Solution:
     def maximumCandies(self, candies: List[int], k: int) -> int:
-            totalcandies=sum(candies)
             def ispilesizeallowed(pilesize,candies,k):
                 divisor=pilesize
                 currsum=0
