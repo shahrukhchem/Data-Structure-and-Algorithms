@@ -5,9 +5,10 @@ class Solution:
                 currsum=0
                 for x in candies:
                         currsum += x // divisor
-                        if currsum>=k:
-                                return True
-                return False
+                if currsum>=k:
+                        return True
+                else:
+                        return False
             maxpilesizeallowed= max(candies)
             minpilesizeallowed= 1
             while minpilesizeallowed<=maxpilesizeallowed:
