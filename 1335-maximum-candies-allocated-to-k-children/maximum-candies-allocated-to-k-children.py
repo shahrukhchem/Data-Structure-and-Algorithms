@@ -10,9 +10,6 @@ class Solution:
                         return True
                 else:
                         return False
-
-        
-        
             maxpilesizeallowed= max(candies)
             minpilesizeallowed= 1
             while minpilesizeallowed<=maxpilesizeallowed:
@@ -21,7 +18,4 @@ class Solution:
                     minpilesizeallowed=currpilesize+1
                 else:
                     maxpilesizeallowed= currpilesize-1
-            return maxpilesizeallowed
-
-                
-                
+            return maxpilesizeallowed 
