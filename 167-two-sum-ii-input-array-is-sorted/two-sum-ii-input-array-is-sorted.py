@@ -20,5 +20,3 @@ class Solution:
             if res==-1:
                 continue
             return [i+1,res+1]
-
-        
