@@ -3,7 +3,7 @@ class Solution:
         l=0
         r=int(c ** 0.5)
         while l<=r:
-            k=l**2+r**2
+            k=l*l+r*r
             if k==c:
                 return True
             elif k>c:
