@@ -1,8 +1,8 @@
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
-        def binarysearch(arr,binarysearchtarget):
+        def binarysearch(arr,binarysearchtarget,newl):
             n=len(arr)
-            l=0
+            l= newl
             r=n-1
             while l<=r:
                 m=l+((r-l)//2)
@@ -16,9 +16,9 @@ class Solution:
         n=len(numbers)
         for i in range(0,n):
             binarysearchtarget=target-numbers[i]
-            res=binarysearch(numbers[i+1:],binarysearchtarget)
+            res=binarysearch(numbers,binarysearchtarget,i+1)
             if res==-1:
                 continue
-            return [i+1,res+i+2]
+            return [i+1,res+1]
 
         
