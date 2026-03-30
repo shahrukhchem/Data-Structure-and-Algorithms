@@ -17,10 +17,8 @@ class Solution:
         for i in range(0,n):
             binarysearchtarget=target-numbers[i]
             res=binarysearch(numbers[i+1:],binarysearchtarget)
-            
             if res==-1:
                 continue
-            
             return [i+1,res+i+2]
 
         
