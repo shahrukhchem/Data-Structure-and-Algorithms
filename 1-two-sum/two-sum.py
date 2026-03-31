@@ -1,6 +1,5 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        
         sortednums=sorted(nums)
         l=0
         n=len(nums)
@@ -10,7 +9,6 @@ class Solution:
                 c[nums[i]].append(i)
             else:
                 c[nums[i]]=[i]
-        print(c)
         r=n-1
         while l<r:
             if sortednums[l]+sortednums[r]==target:
