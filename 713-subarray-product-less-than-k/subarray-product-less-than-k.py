@@ -10,9 +10,7 @@ class Solution:
         for r in range(0,n):
             prod=prod*nums[r]
             while prod>=k:
-                print(l)
                 prod=prod//nums[l]
                 l=l+1 
             count+=(r-l+1)
-            print(l,r,count,prod)
         return count
