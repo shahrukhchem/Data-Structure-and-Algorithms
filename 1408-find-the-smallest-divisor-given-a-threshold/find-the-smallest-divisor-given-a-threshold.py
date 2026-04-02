@@ -3,8 +3,7 @@ class Solution:
         def sumofdivisor(nums,divisor):
             divisorsum=0
             for i in nums:
-                x=i/divisor
-                divisorsum+= int(x) + (1 if x > int(x) else 0)
+                divisorsum+= (i + divisor - 1) // divisor
             return divisorsum
         n=len(nums)
         k=max(nums)
