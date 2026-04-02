@@ -4,7 +4,6 @@ class Solution:
         r=x
         while l<=r:
             m=l+((r-l)//2)
-            print(m)
             square=m**2
             if square==x:
                 return m
