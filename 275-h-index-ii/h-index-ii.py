@@ -10,7 +10,14 @@ class Solution:
                 if i>=h:
                     count+=1
             return count>=h
-
+        while l<=r:
+            m=l+((r-l)//2)
+            if ishpossible(m):
+                ans=m
+                l=m+1
+            else:
+                r=m-1
+        return ans
         for h in range(0,r+1):
             if not ishpossible(h):
                 return h-1
