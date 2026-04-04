@@ -12,7 +12,6 @@ class Solution:
             return count>=h
 
         for h in range(0,r+1):
-            print(h,ishpossible(h))
             if not ishpossible(h):
                 return h-1
         return n
