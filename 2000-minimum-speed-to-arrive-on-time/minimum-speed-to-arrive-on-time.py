@@ -9,7 +9,7 @@ class Solution:
             totaltime=0
             for i in range(0,n):
                 if i<n-1:
-                    totaltime+=math.ceil(dist[i]/speed)
+                    totaltime+=(dist[i] + speed - 1) // speed
                 else:
                     totaltime+=dist[i]/speed
             return totaltime<=hour
