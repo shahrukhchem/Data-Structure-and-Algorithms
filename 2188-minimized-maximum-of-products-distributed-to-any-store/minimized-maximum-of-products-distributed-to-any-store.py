@@ -3,8 +3,6 @@ class Solution:
         l=1
         r=max(quantities)
         def shoprecieveamounteachmin(amounteachmin):
-            ans=1000000
-            storedist=0
             stores_used=0
             for q in quantities:
                 stores_used += (q + amounteachmin - 1) // amounteachmin
