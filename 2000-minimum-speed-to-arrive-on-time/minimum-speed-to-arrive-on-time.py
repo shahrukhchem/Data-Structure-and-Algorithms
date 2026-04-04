@@ -1,7 +1,7 @@
 class Solution:
     def minSpeedOnTime(self, dist: List[int], hour: float) -> int:
         minspeed=1
-        maxspeed=10000000
+        maxspeed=10**7
         n=len(dist)
         totaltime=0
         def isspeedpossible(speed):
