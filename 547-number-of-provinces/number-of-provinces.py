@@ -16,8 +16,9 @@ class Solution:
         seen=set()
         res=[]
         for n  in range(1,n+1):
-            dfsrecur(n)
-            res.append(tuple(seen))
+            if n not in seen:
+                dfsrecur(n)
+                res.append(tuple(seen))
         res=set(res)
         return len(res)
 
