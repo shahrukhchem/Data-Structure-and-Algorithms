@@ -25,11 +25,9 @@ class Solution:
                 nosa += 1
                 minsumsubarray = max(minsumsubarray, currsum)
             return nosa,minsumsubarray
-       
         ans=0
         while l<=r:
             m=l+((r-l)//2)
-            
             if numberofsubarrayforfixsum(m)[0]<=k:
                 ans=numberofsubarrayforfixsum(m)[1]
                 r=m-1
