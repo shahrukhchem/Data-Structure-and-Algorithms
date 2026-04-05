@@ -14,13 +14,13 @@ class Solution:
                     seen.add(neinode)
                     dfsrecur(neinode)
         seen=set()
-        res=[]
+        count=0
         for n  in range(1,n+1):
             if n not in seen:
                 dfsrecur(n)
-                res.append(tuple(seen))
-        res=set(res)
-        return len(res)
+                count+=1
+        
+        return count
 
 
         
