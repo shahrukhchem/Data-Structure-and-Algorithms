@@ -7,7 +7,6 @@ class Solution:
         ans=n*2
         for right in range(n):
             currsum+=nums[right]
-            
             while currsum>=target:
                 ans=min(ans,right-left+1)
                 currsum-=nums[left]
