@@ -10,8 +10,7 @@ class Solution:
             while currsum>=target:
                 ans=min(ans,right-left+1)
                 currsum-=nums[left]
-                left=left+1
-                
+                left=left+1   
         if ans==n*2:
             return 0
         else:
