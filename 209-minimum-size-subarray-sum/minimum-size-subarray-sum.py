@@ -1,22 +1,20 @@
 class Solution:
     def minSubArrayLen(self, target: int, nums: List[int]) -> int:
-        l=0
-        r=0
+        left=0
+        right=0
         n=len(nums)
-        minsize=float('inf')
-        currsum=nums[l]
-        while r<n:
-            indosize=r-l+1
-            if currsum>=target:
-                if minsize>indosize:
-                    minsize=indosize
-                currsum=currsum-nums[l]
-                l=l+1
-            else:
-                r=r+1
-                if r<n:
-                    currsum=currsum+nums[r]
-        if minsize==float('inf'):
+        currsum=0
+        ans=n*2
+        for right in range(n):
+            currsum+=nums[right]
+            print(currsum,ans)
+            while currsum>=target:
+                ans=min(ans,right-left+1)
+                currsum-=nums[left]
+                left=left+1
+                
+        if ans==n*2:
             return 0
-        return minsize
+        else:
+            return ans
         
