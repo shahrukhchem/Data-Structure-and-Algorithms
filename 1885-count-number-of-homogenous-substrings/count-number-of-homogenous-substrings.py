@@ -5,10 +5,11 @@ class Solution:
         currdict={}
         ans=0
         for right in range(n):
-            if s[right] in currdict:
-                currdict[s[right]]+=1
+            t=s[right]
+            if t in currdict:
+                currdict[t]+=1
             else:
-                currdict[s[right]]=1
+                currdict[t]=1
             while len(currdict)>=2:
                 currdict[s[left]]-=1
                 if currdict[s[left]]==0:
