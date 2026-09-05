@@ -19,5 +19,7 @@ class Solution:
                                 
             if sum(currentchoice) < target:
                 stack.append((currentchoice+[optionsavailable[-1]],optionsavailable))
+            elif sum(currentchoice) > target:
+                continue
             stack.append((currentchoice,optionsavailable[:-1]))
         return res
